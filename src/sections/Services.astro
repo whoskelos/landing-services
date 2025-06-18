@@ -1,0 +1,17 @@
+---
+import Service from '@/components/service.astro'
+import services from '@/data/services'
+---
+
+<section class="pt-20 lg:pt-30">
+  <h2 class="font-semibold subtitle">We Design and Develop the Website Your Business Needs</h2>
+  <div
+    class="pt-10 grid grid-cols-[repeat(auto-fit,minmax(250px,_1fr))] gap-4 justify-between items-center"
+  >
+    {
+      services.map((service) => (
+        <Service icon={service.icon} title={service.title} text={service.text} />
+      ))
+    }
+  </div>
+</section>

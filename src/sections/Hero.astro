@@ -1,0 +1,61 @@
+---
+import '@fontsource/mononoki'
+import Mail from '@/components/icons/email.astro'
+import Telegram from '@/components/icons/telegram.astro'
+import Linkedin from '@/components/icons/linkedin.astro'
+---
+
+<section class="h-dvh pt-40">
+  <span
+    class="font-['Mononoki'] text-md md:text-xl italic tracking-wide bg-black/30 px-4 py-2 rounded-md"
+    >Go Digital. Go Big</span
+  >
+  <h1
+    class="uppercase text-5xl sm:text-6xl lg:text-8xl text-left font-bold tracking-wider pt-8 title"
+  >
+    Unlock Your Business's Online Potential.
+  </h1>
+  <div class="flex flex-col-reverse md:flex-col lg:pt-20">
+    <div class="w-full flex justify-center lg:justify-start pt-40 lg:pt-4">
+      <button
+        type="button"
+        class="w-full lg:w-[40%] px-2 py-4 bg-[#706134] text-xl lg:text-3xl font-bold rounded-full shadow-md transition-all duration-200 hover:bg-[#a4c5ce] hover:text-[#345170] hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#a4c5ce] focus:ring-offset-2 cursor-pointer"
+      >
+        Get Your Website Now
+      </button>
+    </div>
+    <div
+      class="w-full flex flex-row items-center justify-end md:justify-between gap-x-4 pt-8 lg:pt-10"
+    >
+      <p class="text-xl lg:text-4xl font-semibold hidden md:block">Contact</p>
+      <div class="w-full h-full grow hidden md:block">
+        <span class="bg-[#a4c5ce] block w-full h-1"></span>
+      </div>
+      <ul
+        class="flex flex-row items-center gap-x-3 [&>li]:bg-[#706134] [&>li]:p-3 [&>li]:rounded-md [&>li]:transition-all [&>li]:duration-200 [&>li]:hover:bg-[#a4c5ce] [&>li]:hover:scale-105 [&>li]:focus:outline-none [&>li]:focus:ring-2 [&>li]:focus:ring-[#a4c5ce] [&>li]:focus:ring-offset-2"
+      >
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <Linkedin class="w-10 h-10 lg:w-16 lg:h-16 fill-current" />
+          </a>
+        </li>
+        <li>
+          <a href="mailto:info@kelvinguerrero.dev" target="_blank" rel="noopener noreferrer">
+            <Mail class="w-10 h-10 lg:w-16 lg:h-16 fill-current" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><Telegram class="w-10 h-10 lg:w-16 lg:h-16 fill-current" /></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* .title {
+        font-size: clamp(2rem, 6vw + 1rem, 6.5rem);
+    } */
+</style>

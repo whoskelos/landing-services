@@ -1,0 +1,18 @@
+---
+import BentoItem from './BentoItem.astro'
+import companies from '@/data/works'
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10">
+  {
+    companies.map((company) => (
+      <BentoItem
+        name={company.name}
+        url={company.url}
+        category={company.category}
+        description={company.description}
+        cover={company.cover}
+      />
+    ))
+  }
+</div>

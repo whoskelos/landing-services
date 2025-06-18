@@ -1,0 +1,37 @@
+---
+import ExternalLink from '@/components/icons/ExternalLink.astro'
+interface Props {
+  name: string
+  url: string
+  category: string
+  description: string
+  cover: string
+}
+
+const { name, url, cover } = Astro.props
+---
+
+<article>
+  <a href={url} target="_blank" class="flex flex-col gap-2 group">
+    <div
+      class="px-6 pt-4 bg-[#2C3846] rounded-md overflow-hidden drop-shadow-lg group-hover:outline-2 group-hover:outline-[#1d2835]"
+    >
+      <img
+        src={`/companies/${cover}`}
+        alt={name}
+        class="rounded-t-2xl transition-transform duration-300 group-hover:scale-105 group-focus:scale-105"
+      />
+    </div>
+    <div
+      class="flex flex-row items-center px-6 py-3 rounded-full bg-[#2C3846] outline-transparent transition-colors duration-500 group-hover:bg-gradient-to-br group-hover:from-[#4c627c] group-hover:to-[#2C3846] group-focus:bg-gradient-to-br group-focus:from-[#4c627c] group-focus:to-[#2C3846] drop-shadow-lg group-hover:outline-2 group-hover:outline-[#1d2835]"
+    >
+      <p class="text-sm md:text-lg lg:text-xl grow">{name}</p>
+      <span
+        class="bg-[#1d2835] group-hover:bg-white group-focus:bg-white transition duration-300 p-2 rounded-full"
+        ><ExternalLink
+          class="size-6 md:size-8 stroke-current group-hover:stroke-[#1d2835] group-hover:scale-105 group-focus:stroke-[#1d2835] group-focus:scale-105 transition duration-300"
+        /></span
+      >
+    </div>
+  </a>
+</article>

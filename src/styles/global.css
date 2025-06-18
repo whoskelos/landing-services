@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.subtitle {
+    font-size: clamp(2rem, 2vw + 1rem, 3rem);
+}

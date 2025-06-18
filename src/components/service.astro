@@ -1,0 +1,40 @@
+---
+interface Props {
+  icon: string
+  title: string
+  text: string
+}
+const { icon, title, text } = Astro.props
+---
+
+<article
+  class="bg-[#2C3846] transition duration-500 hover:bg-gradient-to-tl hover:from-[#4c627c] hover:to-[#2C3846] h-72 p-3 flex flex-col gap-14 rounded-md group card"
+>
+  <header class="text-3xl text-white">
+    <div class="group-hover:scale-105 transition-transform duration-300">
+      {icon}
+    </div>
+  </header>
+  <main class="grow">
+    <h3 class="text-lg font-semibold text-white">{title}</h3>
+    <p class="text-gray-300 text-sm leading-relaxed">{text}</p>
+  </main>
+</article>
+
+<style>
+  .card {
+    position: relative;
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: red;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 13px;
+  }
+</style>
